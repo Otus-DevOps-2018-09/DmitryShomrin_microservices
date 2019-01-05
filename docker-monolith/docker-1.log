@@ -1,0 +1,22 @@
+REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
+dmitryshomrin/ubuntu-tmp-file   latest              fa2c54ed485f        36 seconds ago      116MB
+test_task_e42_ng                latest              6dd8a18e81b8        7 weeks ago         197MB
+ngte                            latest              3c49d72c3c0b        7 weeks ago         197MB
+<none>                          <none>              62d1c7442a83        7 weeks ago         304MB
+<none>                          <none>              a29ea91f0632        7 weeks ago         197MB
+<none>                          <none>              d9838a021c43        7 weeks ago         197MB
+redmain_cont                    latest              7432fabcac13        7 weeks ago         944MB
+redmine                         latest              2d0cd27c0f11        7 weeks ago         694MB
+mysql                           5.7                 702fb0b7837f        2 months ago        372MB
+ubuntu                          16.04               4a689991aa24        2 months ago        116MB
+ubuntu                          18.04               ea4c82dcd15a        2 months ago        85.8MB
+oraclelinux                     7-slim              b8b00d5b0a75        2 months ago        117MB
+debian                          stretch-slim        4b4471f624dc        2 months ago        55.3MB
+ubuntu                          xenial-20180705     e13f3d529b1a        5 months ago        115MB
+sameersbn/redmine               3.4.6               2a7474dcda76        6 months ago        696MB
+ubuntu                          bionic-20180526     113a43faa138        7 months ago        81.2MB
+
+Образ это сохраненное состояние контейнера, а контейнер - это запущенный инстанс образа.
+У контейнера могут быть параметры, которые не может иметь образ, например, сетевые настройки.
+В выводе команды Inspect контейнера будет указан образ из которого запущен контейнер.
+В выводе команды Inspect образа будет указан родительский образ, на основе которого собран текущий.
