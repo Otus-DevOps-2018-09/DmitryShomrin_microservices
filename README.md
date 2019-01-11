@@ -51,3 +51,14 @@ docker run -d --network=reddit --network-alias=comment_newalias -e "COMMENT_DATA
 docker run -d --network=reddit -p 9292:9292 -e "POST_SERVICE_HOST=post_newalias" -e "COMMENT_SERVICE_HOST=comment_newalias" dmitryshomrin/ui:3.0
 
 ```
+
+***
+Docker-4
+Выполнено:
+ - Запустил контейнеры с разными network driver
+ - Создал две сети: front_net, back_net
+ - Написал docker-compose.yml и параметризовал его
+ - Задал переменные в файле .env
+ - Создал файл docker-compose.override.yml
+
+Имя проекта можно задать с помощью переменной `COMPOSE_PROJECT_NAME` или ключом -p при старте
