@@ -1,0 +1,19 @@
+---
+- name: run docker container
+  hosts: all
+  become: true
+
+  vars_files:
+    - "{{ inventory_dir }}/credentials.yml"
+
+  tasks:
+    - name: Log into DockerHub
+      docker_login:
+        username: "{{ credentials.name }}"
+        password: "{{ credentials.password }}"
+    - name: Create a data container
+      docker_container:
+        name: reddit
+        image: dmitryshomrin/otus-reddit:1.0
+        published_ports: 9292:9292
+        restart_policy: always
