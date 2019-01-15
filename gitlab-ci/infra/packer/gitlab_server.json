@@ -1,0 +1,25 @@
+{
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `project_id`}}",
+            "image_name": "gitlab-docker-{{timestamp}}",
+            "image_family": "gitlab-docker",
+            "source_image_family": "{{user `source_image_family`}}",
+            "zone": "europe-west1-b",
+            "ssh_username": "appuser",
+            "machine_type": "{{user `machine-type`}}",
+            "image_description": "gitlab-docker description",
+            "disk_size": "100",
+            "disk_type": "pd-standard",
+            "network": "default",
+            "tags": "gitlab-server"
+        }
+    ],
+    "provisioners": [
+        {
+        "type": "ansible",
+        "playbook_file": "ansible/base.yml"
+        }
+    ]
+}
