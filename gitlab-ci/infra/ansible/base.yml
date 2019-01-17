@@ -1,0 +1,45 @@
+---
+- name: Check && install python
+  hosts: all
+  become: true
+  gather_facts: False
+
+  tasks:
+    - name: Install python for Ansible
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      changed_when: False
+
+    - name: add apt-key
+      raw: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+    - name: add repo
+      raw: add-apt-repository "deb https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+    - name: install docker
+      apt: pkg=docker-ce state=installed update_cache=true
+
+    - name: install docker-compose
+      apt: pkg=docker-compose state=installed update_cache=true
+   
+    - name: install pip
+      apt:
+        name: python-pip
+        state: installed
+
+    - name: enable docker-service
+      systemd:
+        name: docker
+        enabled: yes
+
+    - name: add appuser in docker group
+      user:
+        append: yes
+        name: appuser
+        groups: docker
+    
+    - name: Install pip docker for module docker_container
+      pip:
+        name: docker
+
+    - name: Make gitlab directory
+      raw: mkdir -p /srv/gitlab/config /srv/gitlab/data /srv/gitlab/logs
