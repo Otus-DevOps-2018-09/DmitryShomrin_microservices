@@ -81,3 +81,23 @@ gitlab-ci-2
  - В stage и prod окружениях сделал запуск "по кнопке"
  - Добавил условие наличия тега
  - Настроил динамическое окружение для каждой новой ветки
+
+***
+Monitoring-1
+Выполнено:
+ - Развернул prometheus и приложение с помощью docker-compose
+ - Посмотрел helthcheck'и
+ - Использовал node ecxporter для мониторинга виртуальной машины
+ - Запушил образа контейнеров в dockerhub
+ - Для мониторинга БД использовал percona/mongodb_exporter
+ - Для blackbox мониторинга использовал google/cloudprober
+ - Написал Makefile для сборки и пуша образов
+
+Ссылки на образа dockerhub:
+ ```
+https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/cloudprober
+https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/cloudprober
+https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/ui
+https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/post
+https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/comment
+ ```
