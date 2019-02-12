@@ -101,3 +101,17 @@ https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/ui
 https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/post
 https://cloud.docker.com/u/dmitryshomrin/repository/docker/dmitryshomrin/comment
  ```
+
+***
+Monitoring-2
+Выполнено:
+ - Установил Grafana
+ - Использовал готовый dashbord для мониторинга Docker и системы
+ - Создал свой dashbord для мониторинга ui
+ - Добавил график количества запросов к UI
+ - Использовал rate для наблюдения изменения количества запросов и запросов с неверным адресом за единицу времени
+ - Добавил график с 95 процентилем времени ответа на запрос
+ - Создал dashbord с бизнес метриками
+ - Настроил alertmanager для отправки в slack сообщений в случае недоступности одной из наблюдаемых систем
+Ссылка на dockerhub с образами:
+https://cloud.docker.com/u/dmitryshomrin/repository/list
