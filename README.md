@@ -130,3 +130,8 @@ Kubernetes-1
  - Прошел Kubernetes The Hard Way
  - Проверил, что kubectl apply -f проходит по созданным до этого deployment-ам и поды запускаются
  - Удалил кластер после прохождения THW
+
+***
+Выполнено:
+ - Развернул локальное окружение для работы с Kubernetes и использовали его для разворачивания reddit app
+ - Резвернул kubernetes в GKE, развернули reddit в dev namespace
