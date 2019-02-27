@@ -159,3 +159,12 @@ Kubernetes-4
  - Обновил установленное helm-ом приложение
  - Развернул Gitlab в kubernetes
  - Настроил CI/CD для приложения в Gitlab
+
+***
+Kubernetes-5
+Выполнено:
+ - Установил prometheus в кластер
+ - Добавил в prometheus job для сервисов ui post и comment
+ - Развернул grafana, добавили в нее мониторинг kubernetes, бизнес логики и UI
+ - Создал переменную namespace и изменил дашборды для мониторинга reddit по отдельности в разных namespaces
+ - Загрузил дэшборд kubernetes deployment metrics
